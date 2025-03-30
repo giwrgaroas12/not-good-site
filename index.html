@@ -1,0 +1,275 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ap solutions">
+    <meta name="twitter:description" content="the best free third party assistant program">
+    <meta name="twitter:image" content="https://cdn.discordapp.com/attachments/1116796175073411192/1214308613430972517/image-gc.png?ex=65f8a406&amp;is=65e62f06&amp;hm=bf9f3801cbe4c54991ede26364d4ac66c59eebbee91fa271cbb7ba2e0e8e0388&amp;">
+    <meta name="twitter:url" content="clixzy.xyz">
+
+    <title>ap free</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="black-dashboard.css">
+    <link rel="icon" href="https://cdn.discordapp.com/avatars/1241424034994847856/bcae9deb885ac7c780764cd4b73c8e09?size=1024">
+    <style>
+	body {
+            margin: 0;
+            padding: 0;
+            background: url('Background.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .top-bar {
+            position: relative;
+            background: white;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+            z-index: 2;
+        }
+        .top-bar h1, .dropdown span {
+            color: black;
+            margin: 0;
+            font-size: 1.5em;
+            font-weight: normal;
+        }
+        .top-bar h1 span {
+            font-weight: bold;
+        }
+        .container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 60px);
+            z-index: 1;
+        }
+        .title {
+            font-size: 4em;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .discord-button, .scroll-arrow {
+            display: block;
+            width: 200px;
+            height: 50px;
+            margin: 20px auto;
+            background: #7289DA;
+            text-align: center;
+            border-radius: 25px;
+            color: white;
+            font-weight: bold;
+            line-height: 50px;
+            transition: background .3s;
+            animation: bounce 2s infinite;
+        }
+        .scroll-arrow {
+    position: absolute;
+    bottom: 10px;
+    left: calc(50% - 22px); /* Adjust the 10px to move the arrow to your desired position */
+    transform: translateX(-50%);
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: none;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 2em;
+    line-height: 50px;
+    animation: bounce 2s infinite;
+    border: 1px solid white;
+}
+        .discord-button:hover, .scroll-arrow:hover {
+            background: #5865f2;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content p {
+    color: black;
+    font-size: 1em;
+}
+.checkmark {
+    color: green;
+}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .scroll-content {
+            background: rgba(0, 0, 0, 0.5);
+            min-height: 100vh;
+            width: 100%;
+            z-index: 3;
+            position: relative;
+        }
+
+        .about-section {
+            width: 70%;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 100px;
+            color: darkgray;
+        }
+
+        .about-title {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .about-description {
+            font-size: 1.5em;
+            line-height: 1.6;
+        }
+
+.status-link {
+    color: black;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+.status-link:hover {
+    color: #5865f2; /* or any other color you prefer for hover state */
+}
+	.status-link:first-of-type {
+    margin-right: 20px;
+}
+
+	.notification {
+        visibility: hidden;
+        position: fixed;
+        z-index: 9999;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #4CAF50;
+        color: white;
+        border-radius: 4px;
+        text-align: center;
+        min-width: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 0.0;
+        font-size: 15px;
+        border: none;
+        height: 60px; /* set a fixed height */
+    }
+
+    .notification p {
+        /* Set line height to 30px to vertically center the text */
+        line-height: 30px;
+        margin-top: 5px; /* move the text down */
+    }	
+
+	.users-count {
+            font-size: 2.5em;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 45px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .show {
+            visibility: visible;
+            -webkit-animation: fadein 1.0s, fadeout 0.5s 4.5s;
+            animation: fadein 1.0s, fadeout 0.5s 4.5s;
+        }
+        @-webkit-keyframes fadein {
+            from {top: 0; opacity: 0;} 
+            to {top: 20px; opacity: 1;}
+        }
+        @keyframes fadein {
+            from {top: -50px; opacity: 0;} 
+            to {top: 20px; opacity: 1;}
+        }
+        @-webkit-keyframes fadeout {
+            from {top: 20px; opacity: 1;} 
+            to {top: 0; opacity: 0;}
+        }
+        @keyframes fadeout {
+            from {top: 20px; opacity: 1;}
+            to {top: -50px; opacity: 0;}
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="top-bar">
+        <h1><span>AP </span>SOLUTIONS</h1>
+        <div>
+            <a href="https://googlecheatz.store/key/" class="status-link">Key/Download</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h1 class="title">AP SOLUTIONS</h1>
+            <p class="users-count">one of the best third party assistant software</p>
+            <a href="https://t.me/bcdeditbase" class="discord-button">contact me </a>
+            <div class="scroll-arrow">⇩</div>
+        </div>
+    </div>
+    <div class="scroll-content">
+        <div class="about-section">
+            <h2 class="about-title">A few things about us, and what we do</h2>
+            <p class="about-description">ap solutions started in late 2023 for fun , now in 2025 its for users that can't spend an insane ammount of money for a software</p>
+        </div>
+        <div class="about-section">
+            <h2 class="about-title">Ready to jump in?</h2>
+            <p class="about-description">Click on <a href="https://t.me/bcdeditbase">dm me on telegram for it </a> in the top bar to get your GoogleCheatz License key and the Loader! Make sure you join the <a href="https://discord.gg/3KwazNkxVR">Discord</a> to get live updates and status!</p>
+        </div>
+    </div>
+
+    <div id="notification" class="notification" style="display: none;">
+    </div>
+
+    <script>
+        // Add this variable at the top of the script section
+        var showNotification = false;
+        
+        window.onload = function() {
+            var notification = document.getElementById('notification');
+            if (showNotification) {
+                notification.classList.add('show');
+
+                // Notification fades in for 1s, waits for 3s, and fades out for 1s, for a total of 5s
+                setTimeout(function() {
+                    notification.style.display = 'none';
+                }, 4900);
+            } else {
+                notification.style.display = 'none'; // Hide the notification if showNotification is false
+            }
+        }
+    </script>
+
+</body></html>
